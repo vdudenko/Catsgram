@@ -70,4 +70,8 @@ public class PostService {
                 .orElse(0);
         return ++currentMaxId;
     }
+
+    public Optional<Post> findPostById(Long id) {
+        return Optional.ofNullable(posts.get(id));
+    }
 }
